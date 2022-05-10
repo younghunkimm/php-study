@@ -128,7 +128,8 @@
 
 
 <h2>cookie</h2>
-<a href="./cookie/cookie.php">cookie</a>
+<a href="./cookie/cookie1.php">cookie - 1</a><br>
+<a href="./cookie/cookie2.php">cookie - 2 (cookie - 1에 쿠키 시간 카운트)</a>
 
 
 <hr>
@@ -136,9 +137,13 @@
 
 <h2>session</h2>
 <h4>예제</h4>
-<a href="./session/session.php">session - 1</a>
-<h4>로그인</h4>
+<a href="./session/session1.php">session - 1</a><br>
 <a href="./session/session2.php">session - 2</a>
+<h4>로그인</h4>
+<a href="./session/login.html">login</a><br>
+<a href="./session/login_process.php">login process</a><br>
+<a href="./session/session.php">login 후 redirection page</a><br>
+<a href="./session/logout.php">logout</a><br>
 
 
 <hr>

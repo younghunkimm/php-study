@@ -30,4 +30,10 @@ setCookie('cookie2', time(), time()+60);
     <li>
         세션 : 사용자가 브라우저를 닫는 순간 휘발하는 데이터
     </li>
+    <br>
+    <li>
+        setCookie(<mark>쿠키의 이름</mark>, <mark>쿠키의 값</mark>, <mark>expire</mark>, <mark>path - 어떤 경로에서 저장할지 & 해당 경로에서만 사용가능</mark>, <mark>도메인 - 해당 도메인 안에서만 쿠키가 유효</mark>)
+        <br>
+        setCookie("TestCookie", $value, time() + 3600, "/~rasmus/", ".example.com", 1);
+    </li>
 </ol>

@@ -4,9 +4,9 @@
 $title = 'subject';
 $$title = 'PHP tutorial';
 
-echo $title;
+echo $title; #subject
 echo "<br />";
-echo $subject;
+echo $subject; #PHP tutorial
 ?>
 
 <h4>

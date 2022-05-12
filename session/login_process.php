@@ -9,6 +9,6 @@ if(!empty($_POST['id']) && !empty($_POST['pw'])) {
         header('Location: ./session.php');
         exit;
     }
-} 
+}
 echo '로그인 하지 못했습니다.';
 ?>

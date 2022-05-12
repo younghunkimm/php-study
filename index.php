@@ -44,6 +44,9 @@
 <h4>Boolean의 대체제</h4>
 <a href="./if/if10.php">if문 - 10</a><br>
 
+<h4>else if</h4>
+<a href="./if/if11.php">if문 - 11 (else if)</a>
+
 
 <hr>
 
@@ -71,6 +74,8 @@
 <a href="./for/for4.php">for문 - 4</a>
 <h4>반복문의 중첩</h4>
 <a href="./for/for5.php">for문 - 5</a>
+<h4>구구단</h4>
+<a href="./for/for6.php">for문 - 6</a>
 
 
 <hr>

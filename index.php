@@ -169,7 +169,8 @@
 
 
 <h2>query</h2>
-<a href="./query/query.php">query</a>
+<a href="./query">입력값을 받아 DB에 추가</a><br>
+<a href="./query/select.php">select</a><br>
 
 
 <hr>

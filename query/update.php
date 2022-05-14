@@ -3,23 +3,10 @@ include './include/dbconnect.php';
 
 $query = "SELECT * FROM topic";
 $result = mysqli_query($dbcon, $query);
-$list = '';
-while ($row = mysqli_fetch_array($result)) {
-  // <li><a href=\"index.php?id=19\">MySQL</a></li>
-  $list.= "<li><a href=\"index.php?id={$row['id']}\">{$row['title']}</a></li>";
-}
 
 # id 값이 없을 때 default 값
 $article = array('title' => 'Welcome', 'description' => 'Hello, web');
-$update_link = '';
-if(isset($_GET['id'])) {
-  $query = "SELECT * FROM topic WHERE id={$_GET['id']}";
-  $result = mysqli_query($dbcon, $query);
-  $row = mysqli_fetch_array($result);
-  $article = array('title' => $row['title'], 'description' => $row['description']);
 
-  $update_link = '<a href="./update.php?id='.$_GET['id'].'">update</a>';
-}
 print_r($article);
 echo "<br />";
 echo $query;
@@ -34,8 +21,24 @@ echo $query;
   <body>
     <h1><a href="index.php">WEB</a></h1>
     <ol>
-      <?=$list?>
+      <?php
+      $list = '';
+      while ($row = mysqli_fetch_array($result)) {
+        // <li><a href=\"index.php?id=19\">MySQL</a></li>
+        $list.= "<li><a href=\"index.php?id={$row['id']}\">{$row['title']}</a></li>";
+      }
+
+      echo $list
+      ?>
     </ol>
+    <?php
+    if(isset($_GET['id'])) {
+      $query = "SELECT * FROM topic WHERE id={$_GET['id']}";
+      $result = mysqli_query($dbcon, $query);
+      $row = mysqli_fetch_array($result);
+      $article = array('title' => $row['title'], 'description' => $row['description']);
+    }
+    ?>
     <form action="process_update.php" method="post">
       <input type="hidden" name="id" value="<?=$_GET['id']?>">
       <p>

@@ -1,13 +1,9 @@
 <?php
 include './include/dbconnect.php';
 
-$query = "SELECT * FROM topic";
+$query = "select * from topic";
 $result = mysqli_query($dbcon, $query);
 
-# id 값이 없을 때 default 값
-$article = array('title' => 'Welcome', 'description' => 'Hello, web');
-
-print_r($article);
 echo "<br />";
 echo $query;
 ?>
@@ -32,12 +28,15 @@ echo $query;
       ?>
     </ol>
     <?php
+    # id 값이 없을 때 default 값
+    $article = array('title' => 'Welcome', 'description' => 'Hello, web');
     if(isset($_GET['id'])) {
-      $query = "SELECT * FROM topic WHERE id={$_GET['id']}";
+      $query = "select * from topic where id={$_GET['id']}";
       $result = mysqli_query($dbcon, $query);
       $row = mysqli_fetch_array($result);
       $article = array('title' => $row['title'], 'description' => $row['description']);
     }
+    print_r($article);
     ?>
     <form action="process_update.php" method="post">
       <input type="hidden" name="id" value="<?=$_GET['id']?>">
@@ -64,4 +63,9 @@ echo $query;
     - UPDATE student SET address='서울';
     - UPDATE student SET name='김영훈' WHERE id=1;
     - UPDATE student SET name='김영훈', birthday="2001-4-1; WHERE id=3;
+
+  4. update, insert 똑같이 쓰는 방법
+    - UPDATE 테이블명 SET 필드 = 값, 필드 = 값 where 필드 = 값;
+    - INSERT 테이블명 SET 필드 = 값, 필드 = 값;
+    *버전에 따라서 안될 수도 있음
  -->

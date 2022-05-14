@@ -1,7 +1,7 @@
 <?php
 include './include/dbconnect.php';
 
-$query = "UPDATE topic SET title = '{$_POST['title']}', description = '{$_POST['description']}' WHERE id = {$_POST['id']}";
+$query = "update topic set title = '{$_POST['title']}', description = '{$_POST['description']}' where id = {$_POST['id']}";
 
 $result = mysqli_query($dbcon, $query);
 if ($result === false) {

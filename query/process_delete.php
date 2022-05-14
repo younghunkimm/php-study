@@ -1,7 +1,7 @@
 <?php
 include './include/dbconnect.php';
 
-$query = "DELETE FROM topic WHERE id = {$_POST['id']}";
+$query = "delete from topic where id = {$_POST['id']}";
 
 $result = mysqli_query($dbcon, $query);
 if ($result === false) {

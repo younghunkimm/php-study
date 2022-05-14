@@ -9,8 +9,9 @@
   <body>
     <h1><a href="index.php">WEB</a></h1>
     <ol>
+      <!-- 직관적으로 바로 여기다가 -->
       <?php
-      $query = "SELECT * FROM topic";
+      $query = "select * from topic";
       $result = mysqli_query($dbcon, $query);
 
       $list = '';
@@ -21,7 +22,6 @@
 
       echo $list
       ?>
-      <!-- 직관적으로 바로 여기다가 -->
     </ol>
     <form action="process_create.php" method="post">
       <p>

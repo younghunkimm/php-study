@@ -2,7 +2,7 @@
 include './include/dbconnect.php';
 
 
-$query = "SELECT * FROM topic WHERE id = 14";
+$query = "select * from topic where id = 14";
 $result = mysqli_query($dbcon, $query);
 
 # php에서 데이터를 활용하기 위해선 php 데이터 타입으로 전환하는 과정을 거쳐야 하는데 그 때 쓰는 api
@@ -33,7 +33,7 @@ echo "<hr />";
 // multi row
 echo "<h1>multi row</h1>";
 
-$query = "SELECT * FROM topic";
+$query = "select * from topic";
 $result = mysqli_query($dbcon, $query);
 
 # ---- 비효율적. 데이터가 삭제되면 로직이 수정되야함

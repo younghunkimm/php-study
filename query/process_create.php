@@ -1,7 +1,7 @@
 <?php
 include './include/dbconnect.php';
 
-$query = "INSERT INTO topic (title, description, created) VALUES ('{$_POST['title']}', '{$_POST['description']}', NOW())";
+$query = "insert into topic (title, description, created) values ('{$_POST['title']}', '{$_POST['description']}', NOW())";
 
 $result = mysqli_query($dbcon, $query);
 if ($result === false) {

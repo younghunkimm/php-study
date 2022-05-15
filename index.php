@@ -176,6 +176,18 @@
 <hr>
 
 
+<h2>query2 - 회원 관리 시스템</h2>
+<a href="./query2/main.html">main</a><br>
+<a href="./query2/create.php">create</a><br>
+<a href="./query2/select.php">select</a><br>
+<a href="./query2/insert.php">insert</a><br>
+<a href="./query2/update.php">update</a><br>
+<a href="./query2/delete.php">delete</a><br>
+
+
+<hr>
+
+
 <h2>게시판</h2>
 <a href="./board_list/board_list.php">게시판</a>
 

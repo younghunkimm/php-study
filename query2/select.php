@@ -9,6 +9,14 @@ if (($_GET['name']) && isset($_GET['name'])) {
 $query = 'select * from user '.$cond.' order by address asc, name desc limit 1000';
 $result = mysqli_query($dbcon, $query);
 
+# like 사용법
+// 1. A로 시작하는 : 'A%'
+// 2. A로 끝나는 : '%A'
+// 3. A를 포함하는 : '%A%'
+// 4. A로 시작하는 두글자 문자 : 'A_'
+// 5. 첫번째 문자가 'A'가 아닌 모든 문자열 : '[^A]'
+// 6. 첫번째 문자가 'A' 또는 'B' 또는 'C'인 문자열 : '[ABC]', '[A-C]'
+
 if ($result) {
   echo mysqli_num_rows($result)."건이 조회됨.<br><br>";
 } else {

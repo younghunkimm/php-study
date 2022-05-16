@@ -1,11 +1,11 @@
 <?php
 include '../dbconnect/dbconnect.php';
 
+# where 1 = 1 쓰는 이유 : 동적쿼리에서 특정상황마다 where절을 다르게 작성해줘야 할 때 편리함.
 $cond = 'where 1 = 1';
 if (($_GET['name']) && isset($_GET['name'])) {
   $cond.= ' and name like "%'.$_GET['name'].'%"';
 }
-// $query = 'select * from user where address="서울" order by name asc limit 1000';
 $query = 'select * from user '.$cond.' order by address asc, name desc limit 1000';
 $result = mysqli_query($dbcon, $query);
 

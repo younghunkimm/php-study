@@ -66,6 +66,8 @@ echo $query;
 
   4. update, insert 똑같이 쓰는 방법
     - UPDATE 테이블명 SET 필드 = 값, 필드 = 값 where 필드 = 값;
-    - INSERT 테이블명 SET 필드 = 값, 필드 = 값;
+    - INSERT INTO 테이블명 SET 필드 = 값, 필드 = 값;
     *버전에 따라서 안될 수도 있음
+    - INSERT INTO student SET a=1, b=2, c=3;
+
  -->

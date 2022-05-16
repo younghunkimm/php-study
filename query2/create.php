@@ -50,6 +50,5 @@ include '../dbconnect/dbconnect.php';
 
 
 
-
-include '../dbconnect/dbclose';
+include '../dbconnect/dbclose.php';
 ?>

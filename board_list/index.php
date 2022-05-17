@@ -1,22 +1,16 @@
-<?php include '../dbconnect/dbconnect.php' ?>
+<?php include '../dbconnect/dbconnect.php'; ?>
+<?php include './include/head.php'; ?>
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <title>게시판</title>
-  <link rel="stylesheet" href="./css/style.css">
-</head>
 <body>
   <h2 class="main_title">게시판</h2>
-  <table>
+  <table width="100%">
     <thead>
       <tr>
-        <td width="50" align="center">번호</td>
-        <td width="500" align="center">제목</td>
-        <td width="100" align="center">작성자</td>
-        <td width="200" align="center">날짜</td>
-        <td width="50" align="center">조회수</td>
+        <td width="10%" align="center">번호</td>
+        <td width="40%" align="center">제목</td>
+        <td width="20%" align="center">작성자</td>
+        <td width="20%" align="center">날짜</td>
+        <td width="10%" align="center">조회수</td>
       </tr>
     </thead>
     <tbody>
@@ -32,11 +26,11 @@
         <?php } else { ?>
           <tr>
         <?php } ?>
-            <td width="50" align="center"><?php echo $total ?></td>
-            <td width="500" align="center"><a href="view.php?num=<?php echo $row['num'] ?>"><?php echo $row['title'] ?></a></td>
-            <td width="100" align="center"><?php echo $row['id'] ?></td>
-            <td width="200" align="center"><?php echo $row['date'] ?></td>
-            <td width="50" align="center"><?php echo $row['hit'] ?></td>
+            <td width="10%" align="center"><?php echo $total ?></td>
+            <td width="40%" align="center"><a href="view.php?num=<?php echo $row['num'] ?>"><?php echo $row['title'] ?></a></td>
+            <td width="20%" align="center"><?php echo $row['id'] ?></td>
+            <td width="20%" align="center"><?php echo $row['date'] ?></td>
+            <td width="10%" align="center"><?php echo $row['hit'] ?></td>
           </tr>
         <?php $total --; ?>
       <?php } ?>
@@ -47,3 +41,5 @@
   </div>
 </body>
 </html>
+
+<?php include '../dbconnect/dbclose.php'; ?>

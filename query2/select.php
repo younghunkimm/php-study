@@ -6,16 +6,19 @@ $cond = 'where 1 = 1';
 if (($_GET['name']) && isset($_GET['name'])) {
   $cond.= ' and name like "%'.$_GET['name'].'%"';
 }
+# limit : 목록에 페이징 처리를 위해서 (목록, 상세페이지)
 $query = 'select * from user '.$cond.' order by address asc, name desc limit 1000';
 $result = mysqli_query($dbcon, $query);
 
 # like 사용법
-// 1. A로 시작하는 : 'A%'
-// 2. A로 끝나는 : '%A'
-// 3. A를 포함하는 : '%A%'
-// 4. A로 시작하는 두글자 문자 : 'A_'
-// 5. 첫번째 문자가 'A'가 아닌 모든 문자열 : '[^A]'
-// 6. 첫번째 문자가 'A' 또는 'B' 또는 'C'인 문자열 : '[ABC]', '[A-C]'
+// 1. 'A' 로 시작하는 : 'A%'
+// 2. 'A' 로 끝나는 : '%A'
+// 3. 'A' 를 포함하는 : '%A%'
+// 4. 'A' 로 시작하는 두글자 문자 : 'A_'
+// 5. 첫번째 문자가 'A' 가 아닌 모든 문자열 : '[^A]'
+// 6. 첫번째 문자가 'A' 또는 'B' 또는 'C' 인 문자열 : '[ABC]', '[A-C]'
+
+# in 사용법 (부가적으로 짬날때) -------------------
 
 if ($result) {
   echo mysqli_num_rows($result)."건이 조회됨.<br><br>";
@@ -61,17 +64,7 @@ if ($result) {
       }
 
       while ($row = mysqli_fetch_array($result)) {
-        echo "<tr>";
-        echo "<td>{$row['num']}</td>";
-        echo "<td>{$row['id']}</td>";
-        echo "<td>{$row['name']}</td>";
-        echo "<td>{$row['birth']}</td>";
-        echo "<td>{$row['address']}</td>";
-        echo "<td>{$row['tel']}</td>";
-        echo "<td>{$row['date']}</td>";
-        echo "<td><a href='update.php?id=".$row['id']."'>수정</a></td>";
-        echo "<td><a href='delete.php?id=".$row['id']."'>삭제</a></td>";
-        echo "</tr>";
+        echo "<tr><td>{$row['num']}</td><td>{$row['id']}</td><td>{$row['name']}</td><td>{$row['birth']}</td><td>{$row['address']}</td><td>{$row['tel']}</td><td>{$row['date']}</td><td><a href='update.php?id=".$row['id']."'>수정</a></td><td><a href='delete.php?id=".$row['id']."'>삭제</a></td></tr>";
       }
       ?>
     </table>

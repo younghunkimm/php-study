@@ -189,7 +189,7 @@
 
 
 <h2>게시판</h2>
-<a href="./board_list/board_list.php">게시판</a>
+<a href="./board_list/">게시판</a><br>
 
 
 <hr>

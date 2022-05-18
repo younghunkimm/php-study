@@ -1,8 +1,10 @@
 <?php include '../dbconnect/dbconnect.php'; ?>
 
 <?php
-$query = 'insert into board (title, content, date, hit, id, password) ';
-$query.= 'values ("'.$_POST['title'].'","'.$_POST['content'].'","'.date('Y-m-d H:i:s').'", 0, "'.$_POST['id'].'", "'.$_POST['pw'].'")';
+// 비밀글 체크
+isset($_POST['lockpost']) ? $is_lock = '1' : $is_lock = '0';
+$query = 'insert into board (title, content, date, id, password, lock_post) ';
+$query.= 'values ("'.$_POST['title'].'","'.$_POST['content'].'","'.date('Y-m-d H:i:s').'", "'.$_POST['id'].'", "'.$_POST['pw'].'", "'.$is_lock.'")';
 
 $result = mysqli_query($dbcon, $query);
 ?>

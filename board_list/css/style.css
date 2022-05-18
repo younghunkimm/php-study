@@ -3,7 +3,7 @@ table { border-top: 1px solid #444444; border-collapse: collapse; }
 tr { border-bottom: 1px solid #444444; padding: 10px; }
 td { border-bottom: 1px solid #efefef; padding: 10px; }
 table .even { background: #efefef; }
-.text { text-align: center; padding-top: 20px; color: #000000; }
+.text { text-align: right; padding-bottom: 10px; color: #000000; }
 .text:hover { text-decoration: underline; }
 a:link { color: #57A0EE; text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -11,3 +11,5 @@ a:hover { text-decoration: underline; }
 table.table2 { border-collapse: separate; border-spacing: 1px; text-align: left; line-height: 1.5; border-top: 1px solid #ccc; margin: 20px 10px; }
 table.table2 tr { width: 50px; padding: 10px; font-weight: bold; vertical-align: top; border-bottom: 1px solid #ccc; }
 table.table2 td { width: 100px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc; }
+
+table.view_table { margin-bottom: 20px; }

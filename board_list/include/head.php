@@ -3,5 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>게시판</title>
+  
   <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="./js/jquery-1.12.1-ui.min.js"></script>
 </head>

@@ -1,4 +1,4 @@
-.main_title { text-align: center; }
+.main_title { text-align: center; margin: 0; padding-top:10px; }
 table { border-top: 1px solid #444444; border-collapse: collapse; }
 tr { border-bottom: 1px solid #444444; padding: 10px; }
 td { border-bottom: 1px solid #efefef; padding: 10px; }
@@ -13,3 +13,7 @@ table.table2 tr { width: 50px; padding: 10px; font-weight: bold; vertical-align:
 table.table2 td { width: 100px; padding: 10px; vertical-align: top; border-bottom: 1px solid #ccc; }
 
 table.view_table { margin-bottom: 20px; }
+.view_btn { text-align: right; padding-bottom:10px; }
+.list_btn { text-align: center;}
+
+.dat_edit, .dat_delete { display: none; }

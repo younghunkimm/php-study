@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="board">
+    <p id="result">안녕하세요 김영훈입니다.</p>
+    <button onclick="next()" class="block-button">다음</button>
+  </div>
+  
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  
+  <script>
+    var index = 0;
+    function next(){
+      $.ajax({
+        url: "rel.php",
+        type: "get",
+        data: {index: index ++},
+        success: function(data){
+          data = JSON.parse(data);
+          $('#result').text('저의' + data.desc + '은 ' + data.name + '입니다.');
+    
+          if (index > 2) index = 0;
+        }
+      })
+    }
+  </script>
+</body>
+</html>
